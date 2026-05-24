@@ -87,6 +87,7 @@ using namespace std;
 //     std::cout << count_num << "\n";
 // }
 
+//Check Whether Prime Number 
 int main(){
     //Variables
     int count = 2;
