@@ -63,14 +63,14 @@ int maxSubArraySum()
 ////////////////////////////By KADANE's ALGORITHM//////////////////////////////
 int kadaneAlgoritm()
 {
-    vector<int> vec = {3, -4, 5, 4, -1, 7, -8};
+    vector<int> vec = {3, -4, 5, 4, 1, -7, 8};
     int maxSum = INT_MIN; // Set it to the -infinity
     int currSum = 0;
     for (int i : vec)
     {
         currSum += (i);
         maxSum = max(currSum, maxSum); // Returns the max value out of both
-        if (currSum < 0)
+        if (currSum < 0) //If all the numbers in vector is -ve
         {
             currSum = 0;
         }
@@ -79,6 +79,34 @@ int kadaneAlgoritm()
     cout << maxSum;
     return maxSum;
 }
+
+///LeetCode Problem - 53. Maximum Subarray
+/*
+Given an integer array nums, find the subarray with the largest sum, and 
+return its sum.
+
+Example 1:
+
+Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
+Output: 6
+Explanation: The subarray [4,-1,2,1] has the largest sum 6.
+*/
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int maxSum = INT_MIN;
+        int currSum = 0;
+        for(int i : nums){ //Takes nums as a input vector
+            currSum += i;
+            maxSum = max(maxSum , currSum);
+            if (currSum < 0){
+                currSum =0;
+            }
+        }
+        return maxSum;
+    }
+};
+
 
 int main()
 {
