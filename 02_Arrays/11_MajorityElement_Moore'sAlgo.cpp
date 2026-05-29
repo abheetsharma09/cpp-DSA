@@ -78,6 +78,12 @@ int majorityElementM1(vector<int> mainArr){
 // Question -02 | Majority Element | Approach -02 | Moore's Voting Algorithm
 //Here we use this same approach to solve the Leetcode Problem 
 //169. Majority Element
+/*
+Majority element survives repeated pairwise cancellation.
+We cancel out different elements pairwise. Since the majority element appears more than half 
+the time, it cannot be completely cancelled, so the remaining candidate must be the majority 
+element.
+*/
 int majorityElementM2(vector<int> mainArr){
     int result =0;
     int count = 0;
