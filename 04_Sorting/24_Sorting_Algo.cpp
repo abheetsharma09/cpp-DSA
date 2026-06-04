@@ -16,7 +16,7 @@ vector<int> bubbleSort(vector<int> arr){
         }
         cout << endl;
     }
-    
+
     return arr;
 }
 
@@ -34,13 +34,22 @@ return arr;
 }
 
 vector<int> insertedSort(vector<int> arr){
-
+    for(int i = 0; i <arr.size(); i++){
+    int curr = arr[i];
+    int prev = i -1;
+    while(prev >= 0 && arr[prev] >curr){
+        arr[prev +1] = arr[prev];
+        prev--;
+    }
+    arr[prev+1] = curr;
+    }
+    return arr;
 }
 
 
 int main(){
     vector<int> arr = {8,1,5,2,3};
-    vector<int> sortedArr = selectionSort(arr);
+    vector<int> sortedArr = insertedSort(arr);
     for(int i : sortedArr){
         cout << i<<endl;
     }
