@@ -4,6 +4,9 @@
 using namespace std;
 
 // BUBBLE SORT O(n^2)
+/*
+Repetedly swap two adjacent elements If they are in wrong order.
+*/
 vector<int> bubbleSort(vector<int> arr){
     int arrLen = arr.size();
     for (int i = 0; i < arrLen-1; i++){
@@ -20,6 +23,12 @@ vector<int> bubbleSort(vector<int> arr){
     return arr;
 }
 
+/*
+///////////// STRATEGY //////////
+Find the minimum element in sorted array and swap it with element at 
+begining.
+*/
+
 vector<int> selectionSort(vector<int> arr){
 for(int i =0; i < arr.size(); i++){
     int smallestInd = i;
@@ -33,6 +42,9 @@ for(int i =0; i < arr.size(); i++){
 return arr;    
 }
 
+/*
+Insert an element from unsorted array to its corrected position in sorted array.
+*/
 vector<int> insertedSort(vector<int> arr){
     for(int i = 0; i <arr.size(); i++){
     int curr = arr[i];
