@@ -16,6 +16,7 @@ Every folder represents a dedicated milestone of topics, transitioning from basi
 
 * **04_Sorting**: Here we basically aim at sorting the given array in minimum time possible either asending or desending. At last some challenging questions from Leetcode and Lectures.
 
+* **05_Strings**: Exploring the STL library of C++.Strings a very important Library that adds on more power to the C++ Code.At last i have done few Leetcode problems.
 
 ***
 *“First, solve the problem. Then, write the code.”* Built inside the library, line-by-line, commit-by-commit.
