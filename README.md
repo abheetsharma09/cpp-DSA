@@ -18,5 +18,7 @@ Every folder represents a dedicated milestone of topics, transitioning from basi
 
 * **05_Strings**: Exploring the STL library of C++.Strings a very important Library that adds on more power to the C++ Code.At last i have done few Leetcode problems.
 
+* **06_Maths**: Mathematical Concepts for DSA covered.
+
 ***
 *“First, solve the problem. Then, write the code.”* Built inside the library, line-by-line, commit-by-commit.
