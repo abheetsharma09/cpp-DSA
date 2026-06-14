@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <unordered_map>
 #include <algorithm>
 using namespace std;
 
@@ -24,10 +25,41 @@ bool permutationStringM1(){
 2-> Comapre it using the per window and window size is equal to the string that search in the string
 */
 bool permutationStringM2(){
+    string s1 = "ab";
+    string s2 = "eidbaoaoo";
+    if (s1.length() > s2.length()) {
+        return false;
+    }
+    /*
+   A std::multimap allows duplicate keys. It works by inserting a brand-new 
+   key-value pair every time you "update" it, which would scale terribly 
+   (causing O(N) lookups and massive memory bloat).
+   */
+    unordered_map<char, int> target;
+    for(int i = 0; i < s1.length(); i++){
+        // If key is missing, C++ auto-initializes it to 0, then adds 1
+        target[s1[i]]++; // Automatically creates missing keys with value 0, then increments
+    }
+
+    // for(auto i : target){
+    //     cout << i.first << " : " << i.second << endl;
+    // }
+
+    int s1_len = s1.length();
+    for(int i = 0; i < (s2.length() - s1_len + 1); i++){
+        unordered_map<char , int> window;
+        for(int j = i;j < (i+s1_len);j++){
+        // If key is missing, C++ auto-initializes it to 0, then adds 1
+            window[s2[j]]++;
+        }
+        if(target == window){
+            return true;
+        }
+    }
     return false;
 }
 
 int main(){
-    permutationStringM1();
+    permutationStringM2();
     return 0;
 }
