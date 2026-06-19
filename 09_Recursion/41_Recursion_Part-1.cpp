@@ -3,6 +3,7 @@
 #include <algorithm>
 using namespace std;
 
+// 1732. Find the Highest Altitude | Daily Leetocode Problem
 int dailyProblem(vector<int> gain = {-5,1,5,0,-7})
 {
     vector<int> result = {0};
